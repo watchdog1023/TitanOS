@@ -9,14 +9,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 //mp3 libs
-#include<Mmsystem.h>
-#include<mciapi.h>
-#include<Windows.h>
-#pragma comment(lib, "Winmm.lib")
+//#include<Mmsystem.h>
+//#include<mciapi.h>
+//#include<Windows.h>
+//#pragma comment(lib, "Winmm.lib")
 
 using namespace std;
 
-void director_key;
+void director_key();
 
 int main()
 {
@@ -79,7 +79,7 @@ if(choice == "info")
 
     if(choice == "Protocol X")
         {
-            int code
+            string code;
             cout << "This section is restricted" << endl;
             cout << "Please enter your Tier 2 Director code:" << endl;
             cin >> code;
@@ -101,7 +101,7 @@ if(choice == "info")
                     cout <<"........" <<endl;
                     sleep(2);
                     system("clear");
-                    goto director_key();
+                    director_key();
                 }
         }
     if(choice == "quit")
@@ -149,7 +149,7 @@ if(choice == "info")
                 }
             if (quit == "n")
                 {
-                    goto loop;  
+                  //  goto loop;  
                 }
         }
 }
