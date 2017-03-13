@@ -11,16 +11,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 //mp3 libs
-#include<Mmsystem.h>
-#include<mciapi.h>
-#include<Windows.h>
-#pragma comment(lib, "Winmm.lib")
+//#include<Mmsystem.h>
+//#include<mciapi.h>
+//#include<Windows.h>
+//#pragma comment(lib, "Winmm.lib")
 
 using namespace std;
 
 int main()
 {
-    int code;
+    string code;
     cout << "Please enter Director code:" << endl;
     cin >> code;
     if(code != "1023")
