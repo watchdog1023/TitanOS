@@ -18,6 +18,9 @@
 
 using namespace std;
 
+//global variables
+string task;
+
 int main()
 {
     string code;
@@ -50,6 +53,19 @@ int main()
             cout << "I am Lexa" << endl;
             cout << "I am the TitanOS Commander" << endl;
             cout << "What task must I preform?" << endl;
-            
-        }
+            cout << "[kill] the Others"<<endl;
+        cout <<"[rouge] Protocol"<<endl;
+        cout <<"The [flame] is dead"<<endl;
+        cout <<"[purge] system"<<endl;
+        if(task == "")
+         {
+            cout <<""<<endl;
+         }
+        if(task == "")
+         {
+            cout <<""<<endl;
+
+         }
+    
+    }
 }
