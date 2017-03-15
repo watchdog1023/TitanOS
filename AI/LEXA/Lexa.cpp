@@ -58,6 +58,7 @@ int main()
             cout << "I am the TitanOS Commander" << endl;
             lexa();
         }
+}
 
 void lexa()
     {
