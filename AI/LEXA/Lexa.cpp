@@ -39,6 +39,9 @@ int main()
     
     if(code == "1023")
         {
+            cout << "System starting up" << endl;
+            sleep(2);
+            cout << "Counting all AI's" << endl;
             cout << "'Betty' = [Slave]" << endl;
             cout << "................." << endl;
             sleep(2);
@@ -53,6 +56,7 @@ int main()
             sleep(2);            
             cout << "Commander Lexa = [Online]" << endl;
             sleep(2);
+            system("clear");
             cout << "I am Lexa" << endl;
             sleep(2);            
             cout << "I am the TitanOS Commander" << endl;
@@ -113,7 +117,7 @@ void lexa()
          {
             string sure;
             cout << "Are you sure?" << endl;
-            cin >> sure
+            cin >> sure;
             if(sure == "y")
             {
                 cout <<"This feature is no ready because this is a reusable build"<<endl;
