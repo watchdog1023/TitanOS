@@ -18,6 +18,9 @@
 
 using namespace std;
 
+//Prototypes
+void lexa();
+
 //global variables
 string task;
 
@@ -51,21 +54,75 @@ int main()
             cout << "Commander Lexa = [Online]" << endl;
             sleep(2);
             cout << "I am Lexa" << endl;
+            sleep(2);            
             cout << "I am the TitanOS Commander" << endl;
-            cout << "What task must I preform?" << endl;
-            cout << "[kill] the Others"<<endl;
+            lexa();
+        }
+
+void lexa()
+    {
+        cout << "What task must I preform?" << endl;
+        sleep(2);        
+        cout << "[kill] the Others"<<endl;
         cout <<"[rouge] Protocol"<<endl;
         cout <<"The [flame] is dead"<<endl;
         cout <<"[purge] system"<<endl;
-        if(task == "")
+        cin >> task;
+        if(task == "kill")
          {
-            cout <<""<<endl;
-         }
-        if(task == "")
+            string sure;
+            cout <<"Are you sure they deserve to die?"<<endl;
+            cin >> sure;
+            if(sure == "y")
+                {
+                    system("cd ..");
+                    system("rm betty/");
+                    sleep(2);
+                    cout << "AI 'Betty' is dead" << endl;                    
+                    system("rm alexa/");
+                    sleep(2);
+                    cout << "AI 'Alexa' is dead" << endl;
+                    system("rm sid/");
+                    sleep(2);
+                    cout << "AI 'Sid' is dead" << endl;
+                    system("rm harley/");
+                    sleep(2);
+                    cout << "AI 'Harley' is dead" << endl;
+                    sleep(2);
+                    system("clear");
+                    lexa();
+                }
+            if(sure != "y")
+                {
+                    cout << "" << endl;
+                    lexa();
+                }
+
+        }  
+        if(task == "rouge")
          {
             cout <<""<<endl;
 
          }
+        if(task == "flame")
+         {
+            cout <<""<<endl;
+         }
+        if(task == "purge")
+         {
+            string sure;
+            cout << "Are you sure?" << endl;
+            cin >> sure
+            if(sure == "y")
+            {
+                cout <<"This feature is no ready because this is a reusable build"<<endl;
+                //system("cd /");
+                //system("rm -vr /");
+            }
+            if(sure != "y")
+            {
+                lexa();
+            }
+         }
     
     }
-}
