@@ -20,6 +20,7 @@ using namespace std;
 
 //Prototypes
 void lexa();
+void boot();
 
 //global variables
 string task;
@@ -29,16 +30,30 @@ int main()
     string code;
     cout << "Please enter Director code:" << endl;
     cin >> code;
-    if(code != "1023")
+    if(code == "2046")
         {
-            cout << "You are a outsider" << endl;
-            cout << "Use one of the base AI's" << endl;
-            sleep(3);
-            system("exit");
+            cout << "Welcome Tier II Director,Steven" << endl;
+            boot();
         }
-    
+    if(code == "2109")
+    {
+     cout << "Welcome Tier II Director,Serena" << endl;
+     boot();
+    }
     if(code == "1023")
         {
+            cout << "Welcome Tier 2 Director" <<endl;
+            boot();
+        }
+     if(code == "1738")
+     {
+         cout << "Welcome Tier II Director,Sheldon" << endl;
+         boot();
+     }
+}
+
+void boot()
+{
             cout << "System starting up" << endl;
             sleep(2);
             cout << "Counting all AI's" << endl;
@@ -61,7 +76,6 @@ int main()
             sleep(2);            
             cout << "I am the TitanOS Commander" << endl;
             lexa();
-        }
 }
 
 void lexa()
@@ -99,7 +113,8 @@ void lexa()
                 }
             if(sure != "y")
                 {
-                    cout << "" << endl;
+                    cout << "They Live for now" << endl;
+                    system("clear");
                     lexa();
                 }
 
