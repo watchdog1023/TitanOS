@@ -101,7 +101,7 @@ int main()
                     cout <<"........" <<endl;
                     sleep(2);
                     system("clear");
-                    goto director_key();
+                    director_key();
                 }
         }
     if(choice == "quit")
