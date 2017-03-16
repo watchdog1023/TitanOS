@@ -21,6 +21,7 @@ using namespace std;
 //Prototypes
 void lexa();
 void boot();
+void tier1();
 
 //global variables
 string task;
@@ -42,8 +43,8 @@ int main()
     }
     if(code == "1023")
         {
-            cout << "Welcome Tier 2 Director" <<endl;
-            boot();
+            cout << "Welcome Tier 1 Opperator" <<endl;
+           tier1();
         }
      if(code == "1738")
      {
@@ -58,15 +59,19 @@ void boot()
             sleep(2);
             cout << "Counting all AI's" << endl;
             cout << "'Betty' = [Slave]" << endl;
+            sleep(2);
             cout << "................." << endl;
             sleep(2);
             cout << "'Sid' = [Slave]" << endl;
+            sleep(2);
             cout << "................." << endl;
             sleep(2);
             cout << "'Alexa' = [Slave]" << endl;
+            sleep(2);
             cout << "................." << endl;
             sleep(2);
             cout << "'Harley' = [Slave]" << endl;
+            sleep(2);
             cout << "................." << endl;
             sleep(2);            
             cout << "Commander Lexa = [Online]" << endl;
@@ -94,7 +99,10 @@ void lexa()
             cin >> sure;
             if(sure == "y")
                 {
-                    system("cd ..");
+//this is a temp statement
+                    cout << "This will do nothing" << endl;
+//this is a temp statement                    
+//                    system("cd ..");
                     system("rm betty/");
                     sleep(2);
                     cout << "AI 'Betty' is dead" << endl;                    
@@ -113,7 +121,7 @@ void lexa()
                 }
             if(sure != "y")
                 {
-                    cout << "They Live for now" << endl;
+                    cout << "They Live another day." << endl;
                     system("clear");
                     lexa();
                 }
@@ -141,8 +149,17 @@ void lexa()
             }
             if(sure != "y")
             {
+                system("clear");
                 lexa();
             }
          }
     
+    }
+
+void tier1()
+    {
+        cout << "Activing root mode" << endl;
+        sleep(2);
+        cout << "Welcome Tier 1 Opperator,why have you logged in?" << endl;
+        
     }
