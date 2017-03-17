@@ -43,7 +43,6 @@ int main()
     }
     if(code == "1023")
         {
-            cout << "Welcome Tier 1 Opperator" <<endl;
            tier1();
         }
      if(code == "1738")
