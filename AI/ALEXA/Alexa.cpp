@@ -8,11 +8,6 @@
 //C libs to use system function
 #include<stdio.h>
 #include<stdlib.h>
-//mp3 libs
-#include<Mmsystem.h>
-#include<mciapi.h>
-#include<Windows.h>
-#pragma comment(lib, "Winmm.lib")
 
 using namespace std;
 
