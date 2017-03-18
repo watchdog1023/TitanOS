@@ -5,7 +5,7 @@
 //#include <dos.h>
 //for sleep fuction
 #include<conio.h>
-#include<windows.h>
+//#include<windows.h>
 #include<unistd.h>
 //C libs to use system function
 #include<stdio.h>
