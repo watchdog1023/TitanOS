@@ -4,48 +4,56 @@
 #include<cstdio>
 //#include <dos.h>
 //for sleep fuction
-#include <conio.h> 
+#include<conio.h>
+#include<windows.h>
+#include<unistd.h>
 //C libs to use system function
 #include<stdio.h>
 #include<stdlib.h>
 
 using namespace std;
 
-void director_key;
+void start();
 
 int main()
 {
-    cout <<"Hi,I am TitanOS AI Alexa."<< endl;
-    cout <<"I am starting the core functions of my program now."<<    endl;
-    cout <<"Please wait"<<endl;
-    cout <<"........" <<endl;
+    cout << "Hi,I am TitanOS AI Alexa."<< endl;
+    cout << "I am starting the core functions of my program now."<<    endl;
+    cout << "Please wait"<<endl;
+    cout << "........" <<endl;
     sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
      sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
      sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
      sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
      sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
     sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
      sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
      sleep(2);
-    cout <<"........" <<endl;
+    cout << "........" <<endl;
      sleep(2);
-    cout <<"I have started my core programing and am ready to help you." <<endl;
+    cout << "I have started my core programing and am ready to help you." <<endl;
     sleep(1);
     system("clear");
-    cout <<"TitanOS Alexa has Started"<<endl;
+    start();
+}
+
+void start()
+{
+    cout <<"TitanOS 'Alexa' has Started"<<endl;
     cout <<"what must I do for you?"<<endl;
     string choice;
-    cout<<"info"<<endl;
-    cout <<"help"<<endl;
-    cout<<"Protocol X"<<endl;
-    cin >>choice;
+    cout << "info" <<endl;
+    cout << "help" <<endl;
+    cout << "Protocol X" <<endl;
+    cout << "quit" << endl;
+    cin >> choice;
     if(choice == "info")
        {
             string info;    
@@ -56,8 +64,8 @@ int main()
             cin >> info;
             if(info == "info")
                 {
-                    cout << "" << endl;
-                    
+                    system("clear");
+                    start();
                 }
             
             if(info == "titanos")
@@ -73,7 +81,7 @@ int main()
 
     if(choice == "Protocol X")
         {
-            int code
+            string code;
             cout << "This section is restricted" << endl;
             cout << "Please enter your Tier 2 Director code:" << endl;
             cin >> code;
@@ -94,8 +102,9 @@ int main()
                     sleep(2);
                     cout <<"........" <<endl;
                     sleep(2);
-                    system("clear");
-                    goto director_key();
+                    system("cd ..");
+                    system("cd AI/lexa");
+                    system("./lexa");
                 }
         }
     if(choice == "quit")
@@ -143,27 +152,7 @@ int main()
                 }
             if (quit == "n")
                 {
-                    goto loop;  
+                    start();  
                 }
         }
 }
-
-void director_key()
-    {
-        cout << "Welcome Tier 2 Director" << endl;
-        cout << "You have chosing 'Protocol X'" << endl;
-        string mean;        
-        cout << "Do you know what this means?" << endl;
-        cin >> mean;
-        if(mean == "yes")
-            {
-                sleep(2);
-                cout << "Protocal X is not ready as yet" << endl;
-            }
-        if(mean == "no")
-            {
-                cout << "Protocol X is..." << endl;
-                sleep(2);
-                cout << "Protocal X is not ready as yet" << endl;
-            }
-    }   

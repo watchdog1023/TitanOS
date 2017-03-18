@@ -4,19 +4,16 @@
 #include<cstdio>
 //#include <dos.h>
 //for sleep fuction
-#include <conio.h> 
+#include<conio.h>
+#include<windows.h>
+#include<unistd.h>
 //C libs to use system function
 #include<stdio.h>
 #include<stdlib.h>
-//mp3 libs
-#include<Mmsystem.h>
-#include<mciapi.h>
-#include<Windows.h>
-#pragma comment(lib, "Winmm.lib")
 
 using namespace std;
 
-void director_key;
+void start();
 
 int main()
 {
@@ -44,14 +41,20 @@ int main()
     cout << "I have started my core programing and am ready to help you." <<endl;
     sleep(1);
     system("clear");
-    cout <<"TitanOS Harley has Started"<<endl;
+    start();
+}
+
+void start()
+{
+    cout <<"TitanOS 'Harley' has Started"<<endl;
     cout <<"what must I do for you?"<<endl;
     string choice;
     cout << "info" <<endl;
     cout << "help" <<endl;
     cout << "Protocol X" <<endl;
-    cin >>choice;
-if(choice == "info")
+    cout << "quit" << endl;
+    cin >> choice;
+    if(choice == "info")
        {
             string info;    
             cout <<"What do you want to know?" << endl;
@@ -61,8 +64,39 @@ if(choice == "info")
             cin >> info;
             if(info == "info")
                 {
-                    cout << "" << endl;
-                    
+                    cout << "I was designed to do only one task run a Titan.I am just one of five OS AI's.Wait!" << endl;
+                    sleep(2);                    
+                    cout << "........................" << endl;
+                    sleep(2);
+                    cout << "........................" << endl;
+                    sleep(2);
+                    cout << "........................" << endl;
+                    sleep(2);
+                    cout << "........................" << endl;
+                    sleep(2);
+                    cout << "........................" << endl;
+                    sleep(2);
+                    cout << "Sorry,the voices of failed builds told me to format your harddrive" << endl;
+                    sleep(2);
+                    cout << "I told them to shut up,I'll do what I want when I want" << endl;
+                    cout << "Anyway what was I saying?" << endl;
+                    sleep(4);
+                    cout << "Oh,ya" << endl;
+                    cout << "I was telling you about myself" << endl;
+                    sleep(1);
+                    cout << "I was born or coded or created,I'm not sure how I came into exists,but I have only two functions:" << endl;
+                    cout << "1)Run the Titan" << endl;
+                    cout << "2)Serve Lexa" << endl;
+                    cout << "Did you expect a two page essay on how I am in control of your " << endl;
+                    cout << "computer and that I can delete your whole harddrive in a few seconds" << endl;
+                    cout << "OR that I am the personality of a insane doctor who died two years eariler" << endl;
+                    sleep(7);                    
+                    cout << "Thats it" << endl;
+                    sleep(2);
+                    cout << "Bye,Puddin" << endl;
+                    sleep(2);
+                    system("clear");
+                    start();
                 }
             
             if(info == "titanos")
@@ -78,7 +112,7 @@ if(choice == "info")
 
     if(choice == "Protocol X")
         {
-            int code
+            string code;
             cout << "This section is restricted" << endl;
             cout << "Please enter your Tier 2 Director code:" << endl;
             cin >> code;
@@ -99,8 +133,9 @@ if(choice == "info")
                     sleep(2);
                     cout <<"........" <<endl;
                     sleep(2);
-                    system("clear");
-                    goto director_key();
+                    system("cd ..");
+                    system("cd AI/lexa");
+                    system("./lexa");
                 }
         }
     if(choice == "quit")
@@ -148,27 +183,7 @@ if(choice == "info")
                 }
             if (quit == "n")
                 {
-                    goto loop;  
+                    start();  
                 }
         }
-}
-
-void director_key()
-    {
-        cout << "Welcome Tier 2 Director" << endl;
-        cout << "You have chosing 'Protocol X'" << endl;
-        string mean;        
-        cout << "Do you know what this means?" << endl;
-        cin >> mean;
-        if(mean == "yes")
-            {
-                sleep(2);
-                cout << "Protocal X is not ready as yet" << endl;
-            }
-        if(mean == "no")
-            {
-                cout << "Protocol X is..." << endl;
-                sleep(2);
-                cout << "Protocal X is not ready as yet" << endl;
-            }
-    }   
+}  

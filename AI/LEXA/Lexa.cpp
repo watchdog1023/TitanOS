@@ -6,15 +6,12 @@
 #include<cstdio>
 //#include <dos.h>
 //for sleep fuction
-#include <conio.h> 
+#include<conio.h>
+#include<windows.h>
+#include<unistd.h>
 //C libs to use system function
 #include<stdio.h>
 #include<stdlib.h>
-//mp3 libs
-//#include<Mmsystem.h>
-//#include<mciapi.h>
-//#include<Windows.h>
-//#pragma comment(lib, "Winmm.lib")
 
 using namespace std;
 
@@ -101,17 +98,17 @@ void lexa()
 //this is a temp statement
                     cout << "This will do nothing" << endl;
 //this is a temp statement                    
-//                    system("cd ..");
-                    system("rm betty/");
+//                  system("cd ..");
+                    system("rm betty");
                     sleep(2);
                     cout << "AI 'Betty' is dead" << endl;                    
-                    system("rm alexa/");
+                    system("rm alexa");
                     sleep(2);
                     cout << "AI 'Alexa' is dead" << endl;
-                    system("rm sid/");
+                    system("rm sid");
                     sleep(2);
                     cout << "AI 'Sid' is dead" << endl;
-                    system("rm harley/");
+                    system("rm harley");
                     sleep(2);
                     cout << "AI 'Harley' is dead" << endl;
                     sleep(2);
@@ -124,7 +121,6 @@ void lexa()
                     system("clear");
                     lexa();
                 }
-
         }  
         if(task == "rouge")
          {
@@ -141,8 +137,11 @@ void lexa()
             cout << "Are you sure?" << endl;
             cin >> sure;
             if(sure == "y")
-            {
+            { 
+//this is a temp statement
                 cout <<"This feature is no ready because this is a reusable build"<<endl;
+//this is a temp statement
+                cout << "Good Bye" << endl;
                 //system("cd /");
                 //system("rm -vr /");
             }
@@ -157,8 +156,18 @@ void lexa()
 
 void tier1()
     {
+        string dia;
         cout << "Activing root mode" << endl;
         sleep(2);
-        cout << "Welcome Tier 1 Opperator,why have you logged in?" << endl;
-        
+        cout << "Welcome Tier 1 Opperator,must I run a diagnostic test?" << endl;
+        cin >> dia;
+        if(dia == "y")
+            {
+                cout << "OK" << endl;
+                
+            }
+        if(dia == "n")
+            {
+                cout << "Ok" << endl;
+            }
     }
